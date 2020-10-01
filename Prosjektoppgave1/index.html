@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prosjektoppgave1</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
+</head>
+<body>
+    <div class="title">
+        <h1>Finding Nemo</h1>
+    </div>
+    <div class="artist">
+        <h3>About the artist</h3>
+        <p id="kunstner">This artist loves a good movie, and her favorie is Finding Nemo. <br>
+            In in these works of art she wants to challange the observer to interact with the paintings, and try to find Nemo</p>
+    </div>
+    <div class="flex-container">
+        <div class="svg-wrapper">
+            <h2 id="SVGtittel">SVG</h1>
+            <svg width="500px" height="500px" id="mySVG" style="background-color: white">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <g id="nemo">
+                        <rect x="250" y="200" width="20" height="100" fill="#FA3301"/>
+                        <rect x="270" y="200" width="2" height="100" storke="black" fill="black"/>
+                        <rect x="272" y="200" width="18" height="100" fill="white"/>
+                        <rect x="290" y="200" width="2" height="100" storke="black" fill="black"/>
+                        <rect x="292" y="200" width="18" height="100" fill="#FA3301"/>
+                        <rect x="310" y="200" width="2" height="100" storke="black" fill="black"/>
+                        <rect x="312" y="200" width="18" height="100" fill="white"/>
+                        <rect x="330" y="200" width="2" height="100" storke="black" fill="black"/>
+                        <rect x="332" y="200" width="18" height="100" fill="#FA3301"/>
+                        <polygon points="350,200 400,250 350,300" fill="#FA3301"/>
+                        <polygon points="250,250 200,200 200,300" fill="#FA3301"/>
+                        <circle cx="365" cy="235" r="4" stroke="white" stroke-width="1" fill="black"/>
+                        
+                </g>
+                <g id="fish">
+                    <rect id="fishbody" x="250" y="200" width="100" height="100" storke="black" fill="rgba(255,0,0,0.5)"/>
+                    <polygon id="head" points="350,200 400,250 350,300" fill="rgba(255,0,0,0.5)"/>
+                    <polygon id="tale" points="250,250 200,200 200,300" fill="rgba(255,0,0,0.5)"/>
+                    <circle id="eye" cx="365" cy="235" r="4" stroke="white" stroke-width="1" fill="black"/>
+                </g>
+                <line x1="50" y1="500" x2="30" y2="400" stroke-width="2" style="stroke: green" />
+                <line x1="30" y1="400" x2="60" y2="300" stroke-width="2" style="stroke: green" />
+                <line x1="60" y1="300" x2="40" y2="250" stroke-width="2" style="stroke: green" />
+                <line x1="130" y1="500" x2="160" y2="400" stroke-width="2" style="stroke: green" />
+                <line x1="160" y1="400" x2="140" y2="300" stroke-width="2" style="stroke: green" />
+                <line x1="140" y1="300" x2="150" y2="250" stroke-width="2" style="stroke: green" />
+                <line x1="240" y1="500" x2="260" y2="450" stroke-width="2" style="stroke: green" />
+                <line x1="260" y1="450" x2="230" y2="400" stroke-width="2" style="stroke: green" />
+                <g class="bubbles">
+                <circle id="b1" cx="50" cy="550" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b2" cx="100" cy="520" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b3" cx="150" cy="510" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b4" cx="190" cy="740" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b5" cx="220" cy="620" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b6" cx="260" cy="510" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b7" cx="290" cy="730" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b8" cx="330" cy="660" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b9" cx="370" cy="850" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b10" cx="260" cy="910" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b11" cx="290" cy="530" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b12" cx="450" cy="660" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b13" cx="480" cy="550" r="10" stroke="lightblue" stroke-width="2" fill="none" />
+                <circle id="b14" cx="80" cy="650" r="10" stroke="lightblue" stroke-width="2" fill="none"/> 
+                </g>
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+        <div>
+            <h2 id="canvasTittel">HTML5 canvas</h1>
+            <canvas id="myCanvas" width=500px; height="500px" style="background-color: white"></canvas>
+        </div>
+    </div>
+    <div class="button-wrapper">
+            <button id="button">Les mer</button>
+            <div id="dok" style="display: none;">
+                <div class="dok-container">
+                    <div class="dok-element">
+                        <h4>Flexbox og CSS grid</h4>
+                        <p class="txt">
+                            I denne oppgaven har jeg benyttet flexbox rundt maleriene slik at de skal legge seg pent ved siden av hverandre, og over hverandre når skjermen krymper horisontalt. 
+                            Dette er gjort ved å definere flex-direction som row, og bruke wrap i css. 
+                            Nettsiden er dermed responsiv, og fungerer fint på mobil så vel som på PC. <br>
+                            <br>    
+                            Jeg har valgt å ikke benytte css grid siden flex-box dekket behovene mine for denne 
+                            nettsiden, da elementene stort sett skulle være rett under hverandre.
+                        </p>  
+                    </div>  
+                    <div class="dok-element">
+                        <h4>HTML canvas og SVG</h4>
+                        <p class="txt"> 
+                                På SVG-kunstverket til venstre er alle elementene i bildet hardkodet HTML. Animasjon av boblene gjøres med en “keyframe”-animasjon i CSS. 
+                                Den endrer y-koordinat på boblene med -600px og kjøres i 5 sekunder når man “hover” over bildet. 
+                                Forandring av bakgrunnsfarge og farge på fisken gjøres ved hjelp av jQuery.<br>
+                                <br>
+                                Canvas-kunstverket til høyre lages ved å tegne alle elementene i javascript gjennom et Canvas api. 
+                                Animasjonen av boblene skjer når man hover over skjermen ved hjelp av funksjonen addeventListener. 
+                                Animasjon med canvas fungerer på den måten at alt tegnes opp på nytt hele tiden, og i dette tilfellet endrer boblene y-posisjonen med -1 for hver gang det tegnes opp. 
+                                Den gamle boblen blir slettet, og det ser dermed det ut som de beveger seg oppover. 
+                                Alle boblene får her en tilfeldig posisjon nedenfor skjermen når de opprettes, i motsetning til SVG-boblene som er like hver gang. 
+                                De nye fargene på fisken skjer på samme måte; man klikker på skjermen og de nye fargene på fisken tegnes da opp.
+                        </p>  
+                    </div>
+                    <div class="dok-element">
+                        <h4>JQuery</h4>
+                        <p class="txt">
+                                JQuery ble benyttet til interaktivitet med bildene. 
+                                Blant annet brukte jeg de innebygde funksjonene “hover” og “click” for at noe skal skje når jeg “hover” over og klikker på bildet i SVG. 
+                                For eksempel brukte jeg jQuery til å få nemo-fargene på fisken til å vises. 
+                                Dette gjorde jeg ved å bruke “toggle” for å endre display fra “none” til “show” på den nye fisken, og “hide” for å skjule den opprinnelige fisken. 
+                                JQuery er også brukt for å vise og skjule dokumentasjonen.
+                        </p>  
+                    </div>  
+                    <div class="dok-element">
+                            <h4>Cross browser testing</h4>
+                            <p class="txt">
+                                    Cross browser testing utførte jeg ved å åpne prosjektet i forskjellige nettlesere (chrome og safari) der jeg testet all funksjonalitet på nettsiden. 
+                                    Når alt fungerte som det skulle sa jeg meg fornøyd.
+                            </p>  
+                    </div>
+                    <div class="dok-element">
+                            <h4>De nyttigste kildene jeg benyttet var:</h4>
+                            <ul class='kilder'>
+                                <li>
+                                <a class="txt"
+                                    href="https://www.youtube.com/watch?v=EO6OkltgudE">
+                                    4 episoder om canvas. Litt av koden herfra er tatt inspirasjon fra.
+                                </a>
+                                </li>
+                                <li>
+                                <a class="txt" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" >
+                                  Canvas
+                                </a>
+                                </li>
+                                <li>
+                                <a class="txt" href="https://www.w3schools.com/css/css3_flexbox.asp">
+                                  Flexbox
+                                </a>
+                                </li>
+                                <li>
+                                <a class="txt" href="https://www.w3schools.com/graphics/svg_intro.asp">
+                                  SVG
+                                </a>
+                                </li>
+                                <li>
+                                <a class="txt" href="https://www.w3schools.com/jquery/default.asp">
+                                  jQuery
+                                </a>
+                                </li>   
+                            </ul>
+                            <p class="txt2">Noe av koden til animasjonen i canvas har jeg fått litt hjelp og inspirasjon fra studass til. <br>
+                                    I tillegg fikk jeg hjelp til å sentrere boksen med dokumentasjonen som var noe jeg fikk problemer med. </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="canvas.js"></script>
+<script src="index.js"></script>
+</html>
